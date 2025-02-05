@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"], // Ensure DOM APIs are available.
+    "allowJs": true,
+    "skipLibCheck": true, // Skip checking type definitions of libraries.
+    "strict": true, // Keep strict mode for better type safety.
+    "noEmit": true, // Prevent emitting output files (default for Next.js).
+    "esModuleInterop": true, // Allow ES module interop.
+    "module": "esnext",
+    "moduleResolution": "bundler", // Updated for compatibility with Next.js.
+    "resolveJsonModule": true, // Enable JSON imports.
+    "isolatedModules": true, // Required for Next.js.
+    "jsx": "preserve", // Preserve JSX for Next.js.
+    "incremental": true, // Enable incremental builds.
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"] // Aliases for cleaner imports.
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"],
+  "rules": {
+    "@next/next/no-img-element": "off" // Disable the rule that enforces <Image> usage.
+  }
+}
+
+
+// {
+//   "compilerOptions": {
+//     "target": "ES2017",
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "esModuleInterop": true,
+//     "module": "esnext",
+//     "moduleResolution": "bundler",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "jsx": "preserve",
+//     "incremental": true,
+//     "plugins": [
+//       {
+//         "name": "next"
+//       }
+//     ],
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     }
+//   },
+//   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+//   "exclude": ["node_modules"]
+// }
